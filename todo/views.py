@@ -40,3 +40,10 @@ def task_delete(request, pk):
         return redirect(reverse('todo:task_list'))
     return render(request, 'todo/task_confirm_delete.html', {'task': task})
 
+def task_toggle(request, pk):
+    task = get_object_or_404(Task, pk=pk)
+    if request.method == 'POST':
+        task.completed = not task.completed
+        task.save()
+    return redirect(reverse('todo:task_list'))
+

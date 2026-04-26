@@ -16,9 +16,9 @@
             <td>{{ task.title }}</td>
             <td>{{ task.description | linebreaksbr }}</td>
             <td>
-                <form method="post" action="{ % url 'todo:task_toggle' task.pk % }" style="display: inline;">
+                <form method="post" action="{% url 'todo:task_toggle' task.pk %}" style="display: inline;">
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-sm {% if task.completed %} btn-success {% else %} btn-secondary %}">
+                    <button type="submit" class="btn btn-sm {% if task.completed %}btn-success{% else %}btn-secondary{% endif %}">
                         {% if task.completed %} Completed {% else %} Mark as Done {% endif %}
                     </button> 
                 </form>
