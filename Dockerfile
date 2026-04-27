@@ -6,7 +6,7 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-# ✅ Builder needs dev tools
+# Builder needs dev tools
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     libpq-dev \
@@ -25,7 +25,7 @@ ENV PORT=8000
 
 WORKDIR /app
 
-# ✅ Runtime only needs lightweight lib
+# Runtime only needs lightweight libs
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libpq5 \
     && rm -rf /var/lib/apt/lists/*
