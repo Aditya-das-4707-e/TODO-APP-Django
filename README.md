@@ -227,6 +227,7 @@ Your Django application should now be accessible through the ingress controller!
 
 ---
 
+
 # Troubleshooting Guide
 
 <details>
@@ -554,3 +555,18 @@ kubectl get nodes --show-labels
 4. **Monitor logs** with `kubectl logs` for debugging
 5. **Scale as needed** with kubectl scale commands
 
+---
+
+## ArgoCD Dashboard & GitOps
+
+ArgoCD is used for continuous delivery and GitOps. Below is the dashboard showing the synchronized state of the application.
+
+![ArgoCD Dashboard](./images/argocd.png)
+
+### ArgoCD Quick Setup
+
+1. **Install:** `kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml`
+2. **Access:** `kubectl port-forward svc/argocd-server -n argocd 8081:443`
+3. **Password:** `kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d`
+
+For advanced ArgoCD help, visit my [ArgoCD Git Repository](https://github.com/Aditya-das-4707-e/argocd-in-one-shot).
