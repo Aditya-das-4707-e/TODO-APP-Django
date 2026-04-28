@@ -505,6 +505,8 @@ sudo bash -c 'echo "127.0.0.1 localhost" >> /etc/hosts'
 # Access at http://localhost:8080
 ```
 
+![APP](./images/app.png)
+
 ---
 
 ## Useful Kubernetes Commands
