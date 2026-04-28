@@ -47,7 +47,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: aditya81888/todo-app:80310424430ef44c9ded914abdc6a23c9dfe22ae
+          image: aditya81888/todo-app:f07f3621c159d4a949d625647eea9d3193a796d5
           imagePullPolicy: IfNotPresent
           env:
             - name: DEBUG
