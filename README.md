@@ -221,6 +221,8 @@ Open your browser and go to:
 http://localhost:8080
 ```
 
+![app](./images/app.png)
+
 Your Django application should now be accessible through the ingress controller!
 
 ---
@@ -289,6 +291,8 @@ The Host header is not being sent correctly. Ingress uses the Host header to rou
    http://localhost:8080  (in browser)
    ```
 
+![app](./images/app.png)
+   
    **Why this works:** Your browser will automatically send `Host: localhost` header when you visit `http://localhost:8080`, allowing the ingress to route correctly.
 
 </details>
